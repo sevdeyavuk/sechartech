@@ -6,15 +6,21 @@
   <title>AeroSech – Smart Indoor Gardening</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons – clean outline icon library used in How It Works -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
+
+      <!-- UPDATED: logo image + text side by side -->
       <a href="#home" class="nav-logo">
+        <img src="logo.png" alt="AeroSech logo" class="nav-logo-img" />
         <span class="logo-text">Aero<span class="logo-accent">Sech</span></span>
       </a>
+
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -105,9 +111,7 @@
           </div>
           <h3 class="feature-title">95% Water Saving</h3>
           <p class="feature-desc">Our aeroponic misting system uses 95% less water than traditional soil farming — every drop counts.</p>
-          <div class="feature-bar">
-            <div class="feature-bar-fill" style="width: 95%; background: #0ea5e9;"></div>
-          </div>
+          <div class="feature-bar"><div class="feature-bar-fill" style="width: 95%; background: #0ea5e9;"></div></div>
           <span class="feature-bar-label">95% more efficient</span>
         </div>
 
@@ -123,9 +127,7 @@
           </div>
           <h3 class="feature-title">2× Faster Harvest</h3>
           <p class="feature-desc">Nutrient-rich mist delivered directly to roots boosts growth rates, cutting harvest time in half.</p>
-          <div class="feature-bar">
-            <div class="feature-bar-fill" style="width: 80%; background: #22c55e;"></div>
-          </div>
+          <div class="feature-bar"><div class="feature-bar-fill" style="width: 80%; background: #22c55e;"></div></div>
           <span class="feature-bar-label">2× faster than soil</span>
         </div>
 
@@ -139,9 +141,7 @@
           </div>
           <h3 class="feature-title">No Pesticides</h3>
           <p class="feature-desc">Grow 100% chemical-free food in a controlled indoor environment. Pure, natural, and safe for your family.</p>
-          <div class="feature-bar">
-            <div class="feature-bar-fill" style="width: 100%; background: #eab308;"></div>
-          </div>
+          <div class="feature-bar"><div class="feature-bar-fill" style="width: 100%; background: #eab308;"></div></div>
           <span class="feature-bar-label">100% chemical-free</span>
         </div>
 
@@ -156,9 +156,7 @@
           </div>
           <h3 class="feature-title">Energy Efficient</h3>
           <p class="feature-desc">Smart LED grow lights and automated timers minimize electricity use while maximizing plant health.</p>
-          <div class="feature-bar">
-            <div class="feature-bar-fill" style="width: 88%; background: #14b8a6;"></div>
-          </div>
+          <div class="feature-bar"><div class="feature-bar-fill" style="width: 88%; background: #14b8a6;"></div></div>
           <span class="feature-bar-label">88% less energy vs. conventional</span>
         </div>
 
@@ -167,6 +165,7 @@
   </section>
 
   <!-- ===== PRODUCT SHOWCASE SECTION ===== -->
+  <!-- UPDATED: Single product only — comparison removed -->
   <section class="showcase" id="showcase">
     <div class="section-container">
       <div class="section-header">
@@ -174,46 +173,31 @@
         <h2 class="section-title">Elegant Design, <span class="accent">Powerful Technology</span></h2>
         <p class="section-subtitle">Built to fit beautifully in your home while working hard behind the scenes.</p>
       </div>
-      <div class="showcase-grid">
-        <div class="showcase-card">
-          <div class="showcase-image-wrap">
-            <img src="product1.jpg" alt="AeroSech indoor garden – front view" class="showcase-img" />
-            <div class="showcase-overlay">
-              <span>View Details</span>
-            </div>
+
+      <div class="showcase-single">
+        <div class="showcase-card-single">
+          <div class="showcase-img-col">
+            <img src="product1.jpg" alt="AeroSech smart indoor garden system" class="showcase-img-single" />
           </div>
-          <div class="showcase-info">
-            <h3>AeroSech Home</h3>
-            <p>Compact aeroponic tower designed for kitchens and living spaces. Grow herbs, leafy greens, and vegetables year-round.</p>
+          <div class="showcase-info-single">
+            <h3>AeroSech — Smart Indoor Garden</h3>
+            <p>A compact aeroponic tower designed to fit seamlessly into kitchens and living spaces. Grow fresh herbs, leafy greens, and vegetables year-round — with zero soil, minimal effort, and maximum freshness.</p>
             <ul class="showcase-list">
               <li>✔ Smart moisture sensors</li>
               <li>✔ App-controlled nutrient delivery</li>
               <li>✔ Full-spectrum LED grow lights</li>
+              <li>✔ Silent, low-energy operation</li>
             </ul>
-          </div>
-        </div>
-        <div class="showcase-card">
-          <div class="showcase-image-wrap">
-            <img src="product2.jpg" alt="AeroSech modular unit – top view" class="showcase-img" />
-            <div class="showcase-overlay">
-              <span>View Details</span>
-            </div>
-          </div>
-          <div class="showcase-info">
-            <h3>AeroSech Pro</h3>
-            <p>Larger modular system for serious growers and small businesses. Stack and expand as your garden grows.</p>
-            <ul class="showcase-list">
-              <li>✔ Modular tower expansion</li>
-              <li>✔ Real-time growth monitoring</li>
-              <li>✔ Climate-adaptive automation</li>
-            </ul>
+            <a href="#how-it-works" class="btn-showcase">See How It Works →</a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- ===== HOW IT WORKS SECTION ===== -->
+  <!-- UPDATED: Professional Lucide outline icons replace hand-drawn SVGs -->
   <section class="how-it-works" id="how-it-works">
     <div class="section-container">
       <div class="section-header">
@@ -226,14 +210,7 @@
         <div class="step-card">
           <div class="step-number">01</div>
           <div class="step-icon-wrap">
-            <svg class="step-icon" viewBox="0 0 64 64" fill="none">
-              <circle cx="32" cy="32" r="30" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
-              <ellipse cx="32" cy="44" rx="14" ry="5" fill="#bbf7d0"/>
-              <path d="M32 42 L32 28" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
-              <path d="M32 32 Q38 26 44 28" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M32 28 Q26 22 20 24" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <circle cx="32" cy="26" r="4" fill="#4ade80"/>
-            </svg>
+            <i data-lucide="sprout" class="lucide-step-icon"></i>
           </div>
           <h3 class="step-title">Plant</h3>
           <p class="step-desc">Place your seedlings or seeds into the AeroSech pod holders. No soil needed — just plug them in and let the system take over.</p>
@@ -246,14 +223,7 @@
         <div class="step-card">
           <div class="step-number">02</div>
           <div class="step-icon-wrap">
-            <svg class="step-icon" viewBox="0 0 64 64" fill="none">
-              <circle cx="32" cy="32" r="30" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
-              <path d="M22 42 Q22 30 32 26 Q42 22 42 34" stroke="#16a34a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <path d="M22 42 Q32 38 42 34" stroke="#16a34a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <circle cx="22" cy="42" r="4" fill="#4ade80"/>
-              <circle cx="42" cy="34" r="4" fill="#4ade80"/>
-              <circle cx="32" cy="26" r="4" fill="#86efac"/>
-            </svg>
+            <i data-lucide="sun" class="lucide-step-icon"></i>
           </div>
           <h3 class="step-title">Grow</h3>
           <p class="step-desc">AeroSech automatically delivers nutrient-rich mist to roots, adjusts lighting cycles, and monitors plant health 24/7.</p>
@@ -266,13 +236,7 @@
         <div class="step-card">
           <div class="step-number">03</div>
           <div class="step-icon-wrap">
-            <svg class="step-icon" viewBox="0 0 64 64" fill="none">
-              <circle cx="32" cy="32" r="30" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
-              <path d="M20 38 Q32 30 44 38" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <circle cx="26" cy="28" r="6" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/>
-              <circle cx="38" cy="26" r="7" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/>
-              <path d="M32 44 L32 38" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+            <i data-lucide="salad" class="lucide-step-icon"></i>
           </div>
           <h3 class="step-title">Harvest</h3>
           <p class="step-desc">Enjoy fresh, clean, nutrient-packed food in as little as 2–3 weeks. Grown by you, powered by AeroSech.</p>
@@ -345,5 +309,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- This line activates the Lucide icons on the page -->
+  <script>lucide.createIcons();</script>
 </body>
 </html>
