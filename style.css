@@ -61,7 +61,7 @@ a { text-decoration: none; color: inherit; }
   gap: 10px;
 }
 .nav-logo-img {
-  height: 60px;
+  height: 80px;
   width: auto;
   display: block;
   object-fit: contain;
