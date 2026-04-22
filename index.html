@@ -1,289 +1,462 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AeroSech – Smart Indoor Gardening</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Lucide Icons – clean outline icon library used in How It Works -->
+  <meta name="description" content="SecharTech — Akıllı sisfonik tarım teknolojileri ile geleceğin tarımını bugün inşa ediyoruz." />
+  <title>SecharTech — Geleceğin Tarımı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-
-      <!-- UPDATED: logo image + text side by side -->
-      <a href="#home" class="nav-logo">
-        <img src="logo.png" alt="AeroSech logo" class="nav-logo-img" />
-        <span class="logo-text">Aero<span class="logo-accent">Sech</span></span>
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand">
+        <img src="logo.png" alt="SecharTech" class="brand-logo" onerror="this.style.display='none'" />
+        <span class="brand-name">Sechar<span class="brand-accent">Tech</span></span>
       </a>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#urun" class="nav-item">Ürün</a>
+        <a href="#workshoplar" class="nav-item">Atölyeler</a>
+        <a href="#edukit" class="nav-item">EduKit</a>
+        <a href="#neden-biz" class="nav-item">Neden Biz</a>
+        <a href="#hakkimizda" class="nav-item">Hakkımızda</a>
+        <a href="#iletisim" class="nav-item nav-cta">İletişim</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#features" class="nav-link">Features</a></li>
-        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#home" class="nav-cta">Get Started</a></li>
-      </ul>
     </div>
-  </nav>
+  </header>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero" id="home">
-    <div class="hero-container">
-      <div class="hero-text">
-        <span class="hero-badge">🌿 Smart Agriculture</span>
-        <h1 class="hero-title">Grow Fresh,<br /><span class="hero-accent">Grow Smart.</span></h1>
-        <p class="hero-subtitle">
-          AeroSech brings the future of farming into your home. Soilless. Pesticide-free. Powered by technology.
+  <!-- ════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-noise"></div>
+    <div class="container hero-container">
+
+      <div class="hero-text" data-reveal>
+        <div class="hero-eyebrow">
+          <span class="dot-pulse"></span>
+          Türkiye'nin İlk Akıllı Sisfonik Tarım Girişimi
+        </div>
+        <h1 class="hero-headline">
+          Topraksız.<br />
+          <em>Temiz.</em><br />
+          <span class="headline-green">Geleceğe Hazır.</span>
+        </h1>
+        <p class="hero-sub">
+          AeroSech ile evinizde, sınıfınızda veya kurumunuzda — yapay zeka destekli sisfonik teknoloji ile her mevsim, her yerde taze üretim.
         </p>
-        <div class="hero-buttons">
-          <a href="#features" class="btn-primary">Get Started</a>
-          <a href="#how-it-works" class="btn-secondary">How It Works</a>
+        <div class="hero-actions">
+          <a href="#urun" class="btn btn-primary">
+            <i data-lucide="sprout"></i> Ürünü Keşfet
+          </a>
+          <a href="#workshoplar" class="btn btn-ghost">
+            <i data-lucide="users"></i> Atölye'ye Katıl
+          </a>
+          <a href="#iletisim" class="btn btn-outline">
+            <i data-lucide="mail"></i> Bize Ulaş
+          </a>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number">95%</span>
-            <span class="stat-label">Less Water</span>
+        <div class="hero-badges">
+          <span class="badge badge-cs"><i data-lucide="clock"></i> Ürün Yakında</span>
+          <span class="badge badge-cs"><i data-lucide="calendar"></i> Atölyeler Başlıyor</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal-delay>
+        <div class="hero-img-frame">
+          <img src="hero-product.jpg" alt="AeroSech Akıllı Tarım Sistemi" class="hero-img"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="hero-img-overlay"></div>
+          <div class="hero-glow"></div>
+        </div>
+        <div class="hero-float float-1">
+          <i data-lucide="droplets" class="float-icon"></i>
+          <div>
+            <strong>%95</strong>
+            <span>Su Tasarrufu</span>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">2x</span>
-            <span class="stat-label">Faster Growth</span>
+        </div>
+        <div class="hero-float float-2">
+          <i data-lucide="zap" class="float-icon float-icon-gold"></i>
+          <div>
+            <strong>2×</strong>
+            <span>Daha Hızlı Hasat</span>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">0</span>
-            <span class="stat-label">Pesticides</span>
+        </div>
+        <div class="hero-float float-3">
+          <i data-lucide="cpu" class="float-icon float-icon-teal"></i>
+          <div>
+            <strong>YZ</strong>
+            <span>İzleme & Kontrol</span>
           </div>
         </div>
       </div>
-      <div class="hero-image">
-        <div class="image-frame">
-          <img src="product1.jpg" alt="AeroSech smart indoor garden system" class="product-hero-img" />
-          <div class="image-glow"></div>
-        </div>
-        <div class="floating-badge badge-top">
-          <span class="badge-icon">💧</span>
-          <div>
-            <p class="badge-title">Water Saved</p>
-            <p class="badge-value">95% Less</p>
-          </div>
-        </div>
-        <div class="floating-badge badge-bottom">
-          <span class="badge-icon">🌱</span>
-          <div>
-            <p class="badge-title">Growth Speed</p>
-            <p class="badge-value">2× Faster</p>
-          </div>
-        </div>
-      </div>
+
     </div>
     <div class="hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8f5ef"/></svg>
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C400,100 1040,20 1440,60 L1440,90 L0,90 Z" fill="var(--cream)"/>
+      </svg>
     </div>
   </section>
 
-  <!-- ===== FEATURES SECTION ===== -->
-  <section class="features" id="features">
-    <div class="section-container">
-      <div class="section-header">
-        <span class="section-badge">Why AeroSech</span>
-        <h2 class="section-title">Designed for the <span class="accent">Future of Food</span></h2>
-        <p class="section-subtitle">Four reasons why AeroSech is redefining how we grow what we eat.</p>
+  <!-- ════════════════════════════════════════
+       STATS BAR
+  ════════════════════════════════════════ -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat-item" data-count="95" data-suffix="%">
+        <span class="stat-num">0%</span>
+        <span class="stat-label">Su Tasarrufu</span>
       </div>
-      <div class="features-grid">
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap icon-blue">
-            <svg class="feature-icon" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="22" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1.5"/>
-              <path d="M24 10 C20 16 14 20 14 26 a10 10 0 0 0 20 0 C34 20 28 16 24 10Z" fill="#0ea5e9" opacity="0.8"/>
-              <path d="M24 34 L24 28" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-              <path d="M21 31 Q24 28 27 31" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">95% Water Saving</h3>
-          <p class="feature-desc">Our aeroponic misting system uses 95% less water than traditional soil farming — every drop counts.</p>
-          <div class="feature-bar"><div class="feature-bar-fill" style="width: 95%; background: #0ea5e9;"></div></div>
-          <span class="feature-bar-label">95% more efficient</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap icon-green">
-            <svg class="feature-icon" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="22" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
-              <path d="M24 36 L24 18" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M24 22 Q30 18 34 20" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M24 28 Q18 24 14 26" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <circle cx="24" cy="36" r="3" fill="#22c55e"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">2× Faster Harvest</h3>
-          <p class="feature-desc">Nutrient-rich mist delivered directly to roots boosts growth rates, cutting harvest time in half.</p>
-          <div class="feature-bar"><div class="feature-bar-fill" style="width: 80%; background: #22c55e;"></div></div>
-          <span class="feature-bar-label">2× faster than soil</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap icon-amber">
-            <svg class="feature-icon" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="22" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
-              <path d="M24 14 L24 20 M18 18 L22 22 M14 24 L20 24 M18 30 L22 26 M24 34 L24 28 M30 30 L26 26 M34 24 L28 24 M30 18 L26 22" stroke="#eab308" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="24" cy="24" r="5" fill="#eab308"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">No Pesticides</h3>
-          <p class="feature-desc">Grow 100% chemical-free food in a controlled indoor environment. Pure, natural, and safe for your family.</p>
-          <div class="feature-bar"><div class="feature-bar-fill" style="width: 100%; background: #eab308;"></div></div>
-          <span class="feature-bar-label">100% chemical-free</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap icon-teal">
-            <svg class="feature-icon" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="22" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"/>
-              <path d="M18 30 L24 16 L30 30" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <path d="M20 26 L28 26" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M17 34 L31 34" stroke="#14b8a6" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Energy Efficient</h3>
-          <p class="feature-desc">Smart LED grow lights and automated timers minimize electricity use while maximizing plant health.</p>
-          <div class="feature-bar"><div class="feature-bar-fill" style="width: 88%; background: #14b8a6;"></div></div>
-          <span class="feature-bar-label">88% less energy vs. conventional</span>
-        </div>
-
+      <div class="stat-sep"></div>
+      <div class="stat-item" data-count="2" data-suffix="×">
+        <span class="stat-num">0×</span>
+        <span class="stat-label">Büyüme Hızı</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item" data-count="0" data-suffix="">
+        <span class="stat-num">0</span>
+        <span class="stat-label">Pestisit Kullanımı</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item" data-count="365" data-suffix=" gün">
+        <span class="stat-num">0 gün</span>
+        <span class="stat-label">Yıl Boyu Hasat</span>
       </div>
     </div>
   </section>
 
-  <!-- ===== PRODUCT SHOWCASE SECTION ===== -->
-  <!-- UPDATED: Single product only — comparison removed -->
-  <section class="showcase" id="showcase">
-    <div class="section-container">
-      <div class="section-header">
-        <span class="section-badge">Our Product</span>
-        <h2 class="section-title">Elegant Design, <span class="accent">Powerful Technology</span></h2>
-        <p class="section-subtitle">Built to fit beautifully in your home while working hard behind the scenes.</p>
+  <!-- ════════════════════════════════════════
+       PRODUCT — AeroSech
+  ════════════════════════════════════════ -->
+  <section class="section" id="urun">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Ana Ürün</span>
+        <h2 class="section-title">AeroSech <span class="accent">Akıllı Tarım Sistemi</span></h2>
+        <p class="section-sub">Sisfonik teknoloji ile topraksız, pestisitsiz, yapay zeka destekli üretim. Mutfağınızdan, okulunuzdan veya kurumunuzdan — her gün taze.</p>
+        <div class="coming-soon-pill"><i data-lucide="rocket"></i> Yakında Satışta</div>
       </div>
 
-      <div class="showcase-single">
-        <div class="showcase-card-single">
-          <div class="showcase-img-col">
-            <img src="product1.jpg" alt="AeroSech smart indoor garden system" class="showcase-img-single" />
-          </div>
-          <div class="showcase-info-single">
-            <h3>AeroSech — Smart Indoor Garden</h3>
-            <p>A compact aeroponic tower designed to fit seamlessly into kitchens and living spaces. Grow fresh herbs, leafy greens, and vegetables year-round — with zero soil, minimal effort, and maximum freshness.</p>
-            <ul class="showcase-list">
-              <li>✔ Smart moisture sensors</li>
-              <li>✔ App-controlled nutrient delivery</li>
-              <li>✔ Full-spectrum LED grow lights</li>
-              <li>✔ Silent, low-energy operation</li>
-            </ul>
-            <a href="#how-it-works" class="btn-showcase">See How It Works →</a>
+      <div class="product-layout">
+        <div class="product-img-col" data-reveal>
+          <div class="product-img-frame">
+            <img src="product1.jpg" alt="AeroSech Ürün Görseli" class="product-img"
+                 onerror="this.parentElement.classList.add('no-img')" />
+            <div class="product-img-badge">
+              <i data-lucide="shield-check"></i> Pestisitsiz Üretim
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS SECTION ===== -->
-  <!-- UPDATED: Professional Lucide outline icons replace hand-drawn SVGs -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="section-container">
-      <div class="section-header">
-        <span class="section-badge">Simple Process</span>
-        <h2 class="section-title">Three Steps to <span class="accent">Fresh Food</span></h2>
-        <p class="section-subtitle">Growing your own food has never been this simple or rewarding.</p>
-      </div>
-      <div class="steps-grid">
-
-        <div class="step-card">
-          <div class="step-number">01</div>
-          <div class="step-icon-wrap">
-            <i data-lucide="sprout" class="lucide-step-icon"></i>
-          </div>
-          <h3 class="step-title">Plant</h3>
-          <p class="step-desc">Place your seedlings or seeds into the AeroSech pod holders. No soil needed — just plug them in and let the system take over.</p>
-        </div>
-
-        <div class="step-connector">
-          <svg viewBox="0 0 60 20" fill="none"><path d="M5 10 L55 10" stroke="#a3c9a8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr)"/><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" stroke="#a3c9a8" fill="none" stroke-width="1.5"/></marker></defs></svg>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">02</div>
-          <div class="step-icon-wrap">
-            <i data-lucide="sun" class="lucide-step-icon"></i>
-          </div>
-          <h3 class="step-title">Grow</h3>
-          <p class="step-desc">AeroSech automatically delivers nutrient-rich mist to roots, adjusts lighting cycles, and monitors plant health 24/7.</p>
-        </div>
-
-        <div class="step-connector">
-          <svg viewBox="0 0 60 20" fill="none"><path d="M5 10 L55 10" stroke="#a3c9a8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr2)"/><defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" stroke="#a3c9a8" fill="none" stroke-width="1.5"/></marker></defs></svg>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">03</div>
-          <div class="step-icon-wrap">
-            <i data-lucide="salad" class="lucide-step-icon"></i>
-          </div>
-          <h3 class="step-title">Harvest</h3>
-          <p class="step-desc">Enjoy fresh, clean, nutrient-packed food in as little as 2–3 weeks. Grown by you, powered by AeroSech.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT SECTION ===== -->
-  <section class="about" id="about">
-    <div class="section-container">
-      <div class="about-grid">
-        <div class="about-text">
-          <span class="section-badge">Our Mission</span>
-          <h2 class="section-title">Growing a <span class="accent">Sustainable Future</span></h2>
-          <p class="about-para">
-            AeroSech was born from a simple belief: everyone deserves access to fresh, healthy food — regardless of season, climate, or available space.
+        <div class="product-info-col" data-reveal>
+          <p class="product-desc">
+            AeroSech; bitki köklerine doğrudan sis halinde besin çözeltisi ileten akıllı bir sisfonik tarım sistemidir. Toprak, güneş ışığı veya mevsim koşullarına bağlı kalmaksızın — her ortamda verimli tarım mümkün hale gelir.
           </p>
-          <p class="about-para">
-            We combine aeroponic technology with smart automation to create indoor gardens that are efficient, beautiful, and effortless. By eliminating soil and minimizing water use, we're building a model of agriculture that works for both people and the planet.
-          </p>
-          <p class="about-para">
-            From urban apartments to research labs, AeroSech is redefining what it means to grow your own food — cleanly, intelligently, and sustainably.
-          </p>
+          <ul class="benefit-list">
+            <li>
+              <div class="benefit-icon-wrap bi-blue"><i data-lucide="droplets"></i></div>
+              <div>
+                <strong>%95 Su Tasarrufu</strong>
+                <span>Geleneksel tarıma kıyasla su kullanımını minimize eder.</span>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon-wrap bi-green"><i data-lucide="trending-up"></i></div>
+              <div>
+                <strong>2× Daha Hızlı Büyüme</strong>
+                <span>Köklere doğrudan besin erişimi büyüme süresini yarıya indirir.</span>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon-wrap bi-teal"><i data-lucide="cpu"></i></div>
+              <div>
+                <strong>YZ Destekli İzleme</strong>
+                <span>Nem, sıcaklık, besin ve ışık otomatik olarak optimize edilir.</span>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon-wrap bi-amber"><i data-lucide="home"></i></div>
+            <div>
+                <strong>Her Alana Uyumlu</strong>
+                <span>Ev, ofis, okul veya kurumsal alan — kompakt ve modüler tasarım.</span>
+              </div>
+            </li>
+          </ul>
+          <div class="product-cta-row">
+            <a href="#iletisim" class="btn btn-primary btn-sm"><i data-lucide="bell"></i> Haberdar Ol</a>
+            <a href="#edukit" class="btn btn-ghost btn-sm"><i data-lucide="graduation-cap"></i> EduKit'i İncele</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       WORKSHOPS — SecharTech Academy
+  ════════════════════════════════════════ -->
+  <section class="section section-cream" id="workshoplar">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">SecharTech Akademi</span>
+        <h2 class="section-title">Tarım Teknolojisi <span class="accent">Atölyeleri</span></h2>
+        <p class="section-sub">Okullar, üniversiteler ve kurumlar için uygulamalı sisfonik tarım eğitimleri. STEM müfredatıyla entegre edilebilir, sertifikalı atölyeler.</p>
+        <div class="coming-soon-pill cs-amber"><i data-lucide="calendar-clock"></i> Kayıt Yakında Açılıyor</div>
+      </div>
+
+      <div class="workshop-grid">
+        <div class="workshop-card" data-reveal>
+          <div class="wk-icon-wrap">
+            <i data-lucide="users-round"></i>
+          </div>
+          <div class="wk-tag">Grup Eğitimi</div>
+          <h3>Kurumsal Workshop Katılımı</h3>
+          <p>Okul veya kurumunuz için özel düzenlenmiş, tam donanımlı atölye programı. Sisfonik tarım kurulumu, sensör entegrasyonu ve sürdürülebilir üretim planlamasını kapsayan kapsamlı bir eğitim deneyimi.</p>
+          <ul class="wk-list">
+            <li><i data-lucide="check-circle-2"></i> 1–3 günlük yoğun program</li>
+            <li><i data-lucide="check-circle-2"></i> Sertifikalı eğitmen kadrosu</li>
+            <li><i data-lucide="check-circle-2"></i> STEM müfredatıyla uyumlu</li>
+            <li><i data-lucide="check-circle-2"></i> Tüm ekipman sağlanır</li>
+            <li><i data-lucide="check-circle-2"></i> Katılım belgesi</li>
+          </ul>
+          <a href="#iletisim" class="btn btn-primary btn-sm wk-btn"><i data-lucide="send"></i> Bilgi Al</a>
+        </div>
+
+        <div class="workshop-card workshop-card-featured" data-reveal>
+          <div class="wk-featured-label">En Çok Tercih Edilen</div>
+          <div class="wk-icon-wrap">
+            <i data-lucide="book-open-check"></i>
+          </div>
+          <div class="wk-tag wk-tag-light">Bireysel Kit</div>
+          <h3>AeroSech EduKit</h3>
+          <p>Okulunuza, sınıfınıza veya kişisel kullanımınıza özel hazırlanmış eğitim kiti. Tüm sensörler, sistem bileşenleri ve eğitim materyalleri eksiksiz dahildir.</p>
+          <ul class="wk-list">
+            <li><i data-lucide="check-circle-2"></i> Mini sisfonik sistem modülü</li>
+            <li><i data-lucide="check-circle-2"></i> Çevre & nem sensörleri</li>
+            <li><i data-lucide="check-circle-2"></i> Basılı eğitim rehberi</li>
+            <li><i data-lucide="check-circle-2"></i> STEM öğrenme kartları</li>
+            <li><i data-lucide="check-circle-2"></i> Online destek erişimi</li>
+          </ul>
+          <a href="#iletisim" class="btn btn-white btn-sm wk-btn"><i data-lucide="shopping-cart"></i> Ön Sipariş Ver</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       EDUKIT DETAIL
+  ════════════════════════════════════════ -->
+  <section class="section" id="edukit">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Eğitim Çözümü</span>
+        <h2 class="section-title">AeroSech <span class="accent">EduKit</span></h2>
+        <p class="section-sub">Geleceğin çiftçilerini ve mühendislerini yetiştirmek için tasarlandı. Sınıfta, atölyede veya evde — öğrenmeyi görselleştir.</p>
+      </div>
+
+      <div class="edukit-layout">
+        <div class="edukit-img-col" data-reveal>
+          <div class="product-img-frame">
+            <img src="edukit.jpg" alt="AeroSech EduKit" class="product-img"
+                 onerror="this.parentElement.classList.add('no-img')" />
+            <div class="product-img-badge badge-green">
+              <i data-lucide="graduation-cap"></i> STEM Uyumlu
+            </div>
+          </div>
+        </div>
+
+        <div class="edukit-details-col" data-reveal>
+          <div class="edukit-cards">
+            <div class="ek-card">
+              <div class="ek-icon"><i data-lucide="package"></i></div>
+              <div>
+                <strong>Mini Sisfonik Modül</strong>
+                <p>Gerçek ölçekli, çalışır durumda kompakt sisfonik sistem.</p>
+              </div>
+            </div>
+            <div class="ek-card">
+              <div class="ek-icon"><i data-lucide="activity"></i></div>
+              <div>
+                <strong>Sensör Seti</strong>
+                <p>Nem, sıcaklık ve çevre kalitesi sensörleri dahil.</p>
+              </div>
+            </div>
+            <div class="ek-card">
+              <div class="ek-icon"><i data-lucide="book-marked"></i></div>
+              <div>
+                <strong>Eğitim Rehberi</strong>
+                <p>Adım adım kurulum ve deneysel öğrenme materyalleri.</p>
+              </div>
+            </div>
+            <div class="ek-card">
+              <div class="ek-icon"><i data-lucide="layers"></i></div>
+              <div>
+                <strong>STEM Öğrenme Kartları</strong>
+                <p>Biyoloji, fizik ve sürdürülebilirlik konularını destekleyen kart seti.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#iletisim" class="btn btn-primary btn-sm" style="margin-top:1.5rem">
+            <i data-lucide="bell"></i> Satış Bildirimini Al
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       TARGET AUDIENCE
+  ════════════════════════════════════════ -->
+  <section class="section section-dark" id="hedef-kitle">
+    <div class="container">
+      <div class="section-header section-header-light" data-reveal>
+        <span class="eyebrow eyebrow-light">Hedef Kitle</span>
+        <h2 class="section-title">Kim İçin?</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.6)">SecharTech çözümleri; eğitim kurumlarından belediyeye, bireyden kurumsal yapılara kadar geniş bir yelpazede hizmet sunar.</p>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-card" data-reveal>
+          <div class="aud-icon"><i data-lucide="school"></i></div>
+          <h4>Okullar</h4>
+          <p>İlk ve ortaöğretim kurumları için STEM entegreli tarım atölyeleri ve EduKit programları.</p>
+        </div>
+        <div class="audience-card" data-reveal>
+          <div class="aud-icon"><i data-lucide="landmark"></i></div>
+          <h4>Üniversiteler</h4>
+          <p>Araştırma laboratuvarları ve sürdürülebilir tarım bölümleri için ölçeklenebilir sistemler.</p>
+        </div>
+        <div class="audience-card" data-reveal>
+          <div class="aud-icon"><i data-lucide="building-2"></i></div>
+          <h4>Belediyeler</h4>
+          <p>Kentsel tarım projeleri, toplum bahçeleri ve sürdürülebilir şehir girişimleri için.</p>
+        </div>
+        <div class="audience-card" data-reveal>
+          <div class="aud-icon"><i data-lucide="heart-handshake"></i></div>
+          <h4>Gençlik Merkezleri</h4>
+          <p>Girişimcilik ve teknoloji odaklı gençlik programları için uygulamalı eğitim çözümleri.</p>
+        </div>
+        <div class="audience-card" data-reveal>
+          <div class="aud-icon"><i data-lucide="briefcase"></i></div>
+          <h4>Özel Kurumlar</h4>
+          <p>Ofis içi taze üretim, kurumsal sürdürülebilirlik raporlaması ve marka değeri için.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       WHY US
+  ════════════════════════════════════════ -->
+  <section class="section section-cream" id="neden-biz">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Fark Yaratan Şey</span>
+        <h2 class="section-title">Neden <span class="accent">SecharTech?</span></h2>
+        <p class="section-sub">Sıradan bir ürün değil — yeni bir üretim felsefesi.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card" data-reveal>
+          <div class="why-num">01</div>
+          <div class="why-icon"><i data-lucide="beaker"></i></div>
+          <h4>Teknoloji Odaklı</h4>
+          <p>Geleneksel hidroponiden bir adım öte: sisfonik sistem, bitki köklerine oksijen ve besin dengesini mükemmel optimize eder.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-num">02</div>
+          <div class="why-icon"><i data-lucide="leaf"></i></div>
+          <h4>Gerçek Sürdürülebilirlik</h4>
+          <p>%95 daha az su, sıfır toprak kullanımı, sıfır pestisit. Gezegenimize saygılı bir üretim modeli.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-num">03</div>
+          <div class="why-icon"><i data-lucide="globe-2"></i></div>
+          <h4>Yerel Üretim, Küresel Vizyon</h4>
+          <p>Türkiye'den dünyaya; tarım ve eğitim teknolojisini birleştiren çözümler sunuyoruz.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-num">04</div>
+          <div class="why-icon"><i data-lucide="graduation-cap"></i></div>
+          <h4>Eğitimle Güçlendirilmiş</h4>
+          <p>Sadece ürün satmıyoruz — ekosistem kuruyoruz. Eğitim kitlerinden akademi programlarına kadar tam bir öğrenme deneyimi.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-num">05</div>
+          <div class="why-icon"><i data-lucide="cpu"></i></div>
+          <h4>YZ & Sensör Entegrasyonu</h4>
+          <p>Akıllı sensörler ve yapay zeka algoritmaları, bitki büyüme parametrelerini 7/24 izler ve otomatik optimize eder.</p>
+        </div>
+        <div class="why-card" data-reveal>
+          <div class="why-num">06</div>
+          <div class="why-icon"><i data-lucide="users"></i></div>
+          <h4>Kurucu Ekip Bağlılığı</h4>
+          <p>Genç, inovasyon odaklı bir ekip. Her proje için birebir destek, hızlı geri dönüş ve gerçek ortaklık.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT / TEAM
+  ════════════════════════════════════════ -->
+  <section class="section" id="hakkimizda">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="eyebrow">Biz Kimiz</span>
+        <h2 class="section-title">SecharTech <span class="accent">Hakkında</span></h2>
+        <p class="section-sub">Bir garaj projesi değil — gerçek bir vizyon. Sürdürülebilir tarım ve teknoloji eğitimini birleştiren, genç kadın girişimciler tarafından kurulan bir agritech startup'ı.</p>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text-col" data-reveal>
+          <p class="about-para">SecharTech, tarımın geleceğini yeniden tasarlamak için kuruldu. Sisfonik teknolojinin gücünü yapay zeka ile birleştirerek; evden okula, okuldan kurumsal yapılara kadar erişilebilir ve sürdürülebilir üretim çözümleri sunuyoruz.</p>
+          <p class="about-para">Misyonumuz yalnızca ürün satmak değil; tarım okuryazarlığını gençlere kazandıran, şehirlerde yeşil dönüşümü tetikleyen ve yatırımcılar için ölçeklenebilir bir ekosistem inşa etmektir.</p>
           <div class="about-values">
-            <div class="value-pill">🌍 Sustainable</div>
-            <div class="value-pill">🔬 Science-driven</div>
-            <div class="value-pill">🏙️ Urban-friendly</div>
-            <div class="value-pill">💚 Chemical-free</div>
+            <div class="av-pill"><i data-lucide="sprout"></i> Sürdürülebilirlik</div>
+            <div class="av-pill"><i data-lucide="cpu"></i> İnovasyon</div>
+            <div class="av-pill"><i data-lucide="heart"></i> Etki Odaklılık</div>
+            <div class="av-pill"><i data-lucide="shield"></i> Şeffaflık</div>
           </div>
         </div>
-        <div class="about-visual">
-          <div class="about-card">
-            <div class="about-stat-big">
-              <span class="big-number">95%</span>
-              <span class="big-label">Water Reduction</span>
+
+        <div class="team-col" data-reveal>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar avatar-1">
+                <i data-lucide="user-round"></i>
+              </div>
+              <h5>Kurucu & CEO</h5>
+              <p>Tarım teknolojisi ve girişimcilik odaklı, inovasyon tutkunu genç lider.</p>
             </div>
-            <div class="about-divider"></div>
-            <div class="about-stat-big">
-              <span class="big-number">2×</span>
-              <span class="big-label">Faster Yields</span>
+            <div class="team-card">
+              <div class="team-avatar avatar-2">
+                <i data-lucide="user-round"></i>
+              </div>
+              <h5>Kurucu & CTO</h5>
+              <p>Akıllı sistemler ve sensör teknolojileri alanında deneyimli mühendis.</p>
             </div>
-            <div class="about-divider"></div>
-            <div class="about-stat-big">
-              <span class="big-number">∞</span>
-              <span class="big-label">Growing Seasons</span>
+            <div class="team-card">
+              <div class="team-avatar avatar-3">
+                <i data-lucide="user-round"></i>
+              </div>
+              <h5>Eğitim & İçerik</h5>
+              <p>STEM pedagojisi ve müfredat tasarımı konusunda uzman eğitimci.</p>
             </div>
           </div>
         </div>
@@ -291,25 +464,119 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════ -->
+  <section class="section section-dark" id="iletisim">
+    <div class="container">
+      <div class="section-header section-header-light" data-reveal>
+        <span class="eyebrow eyebrow-light">İletişim</span>
+        <h2 class="section-title">Birlikte Büyüyelim</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.6)">Ürün hakkında bilgi almak, atölye planlamak veya iş birliği için bize ulaşın.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-channels" data-reveal>
+          <a href="https://instagram.com/sechartech" target="_blank" class="contact-channel">
+            <div class="cc-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div>
+              <strong>Instagram</strong>
+              <span>@sechartech</span>
+            </div>
+            <i data-lucide="external-link" class="cc-arrow"></i>
+          </a>
+          <a href="mailto:info@sechartech.com" class="contact-channel">
+            <div class="cc-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <div>
+              <strong>E-posta</strong>
+              <span>info@sechartech.com</span>
+            </div>
+            <i data-lucide="external-link" class="cc-arrow"></i>
+          </a>
+          <a href="https://linkedin.com/company/sechartech" target="_blank" class="contact-channel">
+            <div class="cc-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <strong>LinkedIn</strong>
+              <span>SecharTech</span>
+            </div>
+            <i data-lucide="external-link" class="cc-arrow"></i>
+          </a>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-reveal>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Adınız</label>
+              <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required />
+            </div>
+            <div class="form-group">
+              <label for="org">Kurum / Okul</label>
+              <input type="text" id="org" name="org" placeholder="Opsiyonel" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-posta Adresiniz</label>
+            <input type="email" id="email" name="email" placeholder="ornek@kurum.com" required />
+          </div>
+          <div class="form-group">
+            <label for="interest">İlgilendiğiniz Konu</label>
+            <select id="interest" name="interest">
+              <option value="">Seçiniz...</option>
+              <option value="urun">AeroSech Ürünü</option>
+              <option value="workshop">Atölye / Workshop</option>
+              <option value="edukit">EduKit Satın Alma</option>
+              <option value="yatirim">Yatırım / İş Birliği</option>
+              <option value="diger">Diğer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mesajınız</label>
+            <textarea id="message" name="message" rows="4" placeholder="Bize projenizi, kurumunuzu veya sorunuzu anlatın..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <i data-lucide="send"></i> Mesaj Gönder
+          </button>
+          <div class="form-success" id="form-success">
+            <i data-lucide="check-circle-2"></i> Mesajınız alındı. En kısa sürede dönüş yapacağız.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
   <footer class="footer">
-    <div class="footer-container">
+    <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo-text">Aero<span class="logo-accent">Sech</span></span>
-        <p>Smart indoor agriculture for a healthier world.</p>
+        <span class="brand-name">Sechar<span class="brand-accent">Tech</span></span>
+        <p>Geleceğin tarımını bugün inşa ediyoruz.</p>
       </div>
       <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#about">About</a>
+        <a href="#urun">Ürün</a>
+        <a href="#workshoplar">Atölyeler</a>
+        <a href="#edukit">EduKit</a>
+        <a href="#neden-biz">Neden Biz</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
       </div>
-      <p class="footer-copy">© 2025 AeroSech. All rights reserved.</p>
+      <p class="footer-copy">© 2025 SecharTech. Tüm hakları saklıdır.</p>
     </div>
   </footer>
 
+  <!-- Back to top -->
+  <button class="back-top" id="back-top" aria-label="Yukarı çık">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
   <script src="script.js"></script>
-  <!-- This line activates the Lucide icons on the page -->
   <script>lucide.createIcons();</script>
 </body>
 </html>
